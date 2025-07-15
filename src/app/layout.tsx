@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { AppProvider } from "./components/AppContext";
+import Footer from "./components/layout/Footer";
+import Header from "./components/layout/Header";
+
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -23,11 +28,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
       >
-        {children}
+        <AppProvider>
+          <Header />
+          <main className="relative max-w-4xl  mx-auto p-4 ">
+            {children}
+            <Toaster />
+          </main>
+        </AppProvider>
+        <Footer />
       </body>
     </html>
   );
