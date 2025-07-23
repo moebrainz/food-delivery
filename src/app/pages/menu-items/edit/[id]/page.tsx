@@ -69,6 +69,7 @@ const EditMenuPages = () => {
 
   useEffect(() => {
     fetchMenuItems();
+    // react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

@@ -9,7 +9,7 @@ const Hero = () => {
           Every food <span className="text-primary">taste better</span> with us
         </h1>
         <p className="text-gray-400 my-6 text-base">
-          We've got the missing piece with our tasty meals
+          We&apos;ve got the missing piece with our tasty meals
         </p>
         <div className="flex gap-4 text-sm pt-8">
           <button className="bg-primary px-4 py-2 text-white rounded-full flex gap-2 uppercase items-center cursor-pointer font-semibold hover:bg-[#ff5047e2] ">

@@ -52,7 +52,7 @@ const CategoriesPage = () => {
     register,
     handleSubmit,
     setValue,
-    formState: { errors },
+    // formState: { errors },
     reset,
   } = useForm({
     resolver: zodResolver(categoryNameSchema),
