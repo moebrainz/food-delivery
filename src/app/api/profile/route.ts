@@ -4,10 +4,10 @@ import { User } from "@/app/models/User";
 import { getServerSession } from "next-auth";
 import { NextRequest } from "next/server";
 
-type UpdateProps = {
-  name: string;
-  image: string;
-};
+// type UpdateProps = {
+//   name: string;
+//   image: string;
+// };
 
 export async function PUT(req: NextRequest) {
   mongoConnect();
