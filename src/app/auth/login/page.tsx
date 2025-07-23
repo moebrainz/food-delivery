@@ -65,6 +65,7 @@ const Login = () => {
   // };
   const onSubmit = async (data: FormData) => {
     setIsLoading(true);
+    setIsRegistered(true);
     const result = await signIn("credentials", {
       redirect: false,
       ...data,
@@ -76,6 +77,8 @@ const Login = () => {
     if (!result?.ok) {
       // show user-facing error
       setIsLoading(false);
+      setIsRegistered(false);
+
       setIsError(true);
       setGetError("Invalid email or password");
     }

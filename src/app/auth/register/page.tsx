@@ -53,7 +53,8 @@ const Register = () => {
         setIsRegistered(true);
         // show error from backend
       }
-    } catch (err) {
+    } catch (error) {
+      throw new Error("error occured") || error;
       // console.error("Fetch error:", err);
       setIsError(true);
     } finally {
