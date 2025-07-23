@@ -35,7 +35,7 @@ export async function POST(req: Request) {
   } catch (error: any) {
     // Log error in the server terminal
     console.error("Error during user creation:", error);
-
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     if (error.code === 11000) {
       return NextResponse.json(
         { error: "Email already exists" },

@@ -18,7 +18,7 @@ export async function PUT(req: NextRequest) {
   const email = session?.user.email;
 
   //grab user from the database
-  const user = await User.findOne({ email });
+  // const user = await User.findOne({ email });
 
   //get the current user with session
 

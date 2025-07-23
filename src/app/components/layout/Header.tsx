@@ -26,7 +26,7 @@ const Header = () => {
 
   const { carts } = cartCtx;
 
-  function handleShowCart(showCart: boolean) {
+  function handleShowCart() {
     setShowCart((showCart) => !showCart);
   }
 
@@ -81,7 +81,7 @@ const Header = () => {
           {/* <Link href={"/cart"} className="relative"> */}
           <span
             className="relative cursor-pointer"
-            onClick={() => handleShowCart(showCart)}
+            onClick={() => handleShowCart()}
           >
             <ShoppingCart />
             <span className="absolute -top-3 -right-3 bg-primary rounded-full leading-3 text-white p-[5px] text-center text-xs">

@@ -11,7 +11,7 @@ import { z } from "zod";
 
 type FormData = z.infer<typeof registerSchema>;
 
-const page = () => {
+const Register = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [getError, setGetError] = useState("");
@@ -140,4 +140,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Register;

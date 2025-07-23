@@ -4,6 +4,7 @@ import { SessionProvider } from "next-auth/react";
 import { createContext, useEffect, useState } from "react";
 
 type CartContextType = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   carts: any[];
   setCarts: React.Dispatch<React.SetStateAction<any[]>>;
   addCart: (product: any) => void;
@@ -15,19 +16,22 @@ type CartContextType = {
 export const CartContent = createContext<CartContextType | undefined>(
   undefined
 );
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function AppProvider({ children }: any) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [carts, setCarts] = useState<any[]>([]);
 
   const ls = typeof window !== "undefined" ? window.localStorage : null;
   useEffect(() => {
     if (ls && ls.getItem("cart")) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       setCarts(JSON.parse(ls.getItem("cart") || ""));
     }
   }, []);
 
   function saveCartLocalStorage(newCarts: any) {
     if (ls) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       ls.setItem("cart", JSON.stringify(newCarts));
     }
   }

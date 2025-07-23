@@ -28,6 +28,7 @@ const profileSchema = z.object({
   // file: z.string(),
 });
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 type FormData = z.infer<typeof profileSchema>;
 
 const CartSideModal = ({
@@ -47,7 +48,7 @@ const CartSideModal = ({
 
   const {
     register,
-    handleSubmit,
+    // handleSubmit,
     formState: { errors },
     reset,
   } = useForm({
@@ -79,7 +80,8 @@ const CartSideModal = ({
 
   let total = 0;
 
-  for (let p of carts) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  for (const p of carts) {
     console.log("Price", p.itemPrice);
     total += p.itemPrice;
   }
