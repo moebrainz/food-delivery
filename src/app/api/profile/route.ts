@@ -1,4 +1,4 @@
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/app/libs/authOptions";
 import { mongoConnect } from "@/app/libs/utils/mongoConnect";
 import { User } from "@/app/models/User";
 import { getServerSession } from "next-auth";
