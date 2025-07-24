@@ -12,6 +12,8 @@ const Header = () => {
 
   const session = useSession();
 
+  console.log("user session", session);
+
   const userName = session.data?.user?.name || "Guest";
 
   const firstName = userName.split(" ")[0];

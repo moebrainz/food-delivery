@@ -73,16 +73,16 @@ export const authOptions: AuthOptions = {
         // Return null if user data is invalid
         if (!user) return null;
 
-        if (passwordOk) {
-          return { ...user };
-        }
         // if (passwordOk) {
-        //   return {
-        //     id: user._id.toString(),
-        //     email: user.email,
-        //     name: user.name,
-        //   };
+        //   return { ...user };
         // }
+        if (passwordOk) {
+          return {
+            id: user._id.toString(),
+            email: user.email,
+            name: user.name,
+          };
+        }
 
         // Explicitly return null if password is incorrect
         return null;
